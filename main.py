@@ -19,7 +19,7 @@ sth_changed = False
 conn = sqlite3.connect('file:' + Kodi_db_path + '?mode=ro', uri=True)
 c = conn.cursor()
 c.execute('Select c22, userrating from movie where userrating IS NOT NULL')
-files = c.fetchall()
+files = c.fetchall() 
 
 # parse original xml/nfo file
 for file in files:
